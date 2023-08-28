@@ -1,5 +1,9 @@
+import { ButtonContainer, ButtonStyle } from "./buttonLoadMore_style"
+
+
 export const Button = ({handleLoadMore}) => {
     return (
-        <button onClick={handleLoadMore}>Load more</button>
+        <ButtonContainer><ButtonStyle onClick={handleLoadMore}>Load more</ButtonStyle></ButtonContainer>
+        
     )
 }

@@ -1,24 +1,25 @@
 import React from 'react';
+import { StyledButton, StyledInput, Form} from './style_searchbar';
 
 export const Searchbar = ({ changeQuery }) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     const newQuery = evt.target.elements.query.value;
     changeQuery(newQuery);
-    evt.target.reset();
+    // evt.target.reset();
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <button type="submit">
+    <Form onSubmit={handleSubmit}>
+      <StyledButton type="submit">
         <span>Search</span>
-      </button>
+      </StyledButton>
 
-      <input
+      <StyledInput
         name="query"
         type="text"
         placeholder="Search images and photos"
       />
-    </form>
+    </Form>
   );
 };

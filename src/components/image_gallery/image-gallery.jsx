@@ -1,13 +1,16 @@
 import { ImageGalleryItem } from "components/image_gallery_item/image-gallary-item";
-import { GalleryList } from "./style_image_gallery";
+import { GaleryContainer, GalleryList } from "./style_image_gallery";
 
-export const ImageGallery = ({ images }) => {
+export const ImageGallery = ({ images, openModal }) => {
   return (
-    <div >
+    <GaleryContainer>
       <GalleryList>{images.map((image) => (
-        <ImageGalleryItem key={image.id} image={image} />
+        <ImageGalleryItem key={image.id} image={image} openModal={openModal} />
       ))}</GalleryList>
       
-    </div>
+    </GaleryContainer>
   );
 };
+
+
+
